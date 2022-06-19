@@ -1,0 +1,41 @@
+08-Jun-2022 10:57:26.157 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version name:   Apache Tomcat/10.0.13
+08-Jun-2022 10:57:26.162 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 9 2021 22:12:58 UTC
+08-Jun-2022 10:57:26.162 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version number: 10.0.13.0
+08-Jun-2022 10:57:26.163 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+08-Jun-2022 10:57:26.163 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+08-Jun-2022 10:57:26.163 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+08-Jun-2022 10:57:26.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk-18
+08-Jun-2022 10:57:26.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           18+36-2087
+08-Jun-2022 10:57:26.164 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+08-Jun-2022 10:57:26.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13
+08-Jun-2022 10:57:26.165 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13
+08-Jun-2022 10:57:26.178 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.lang=ALL-UNNAMED
+08-Jun-2022 10:57:26.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.io=ALL-UNNAMED
+08-Jun-2022 10:57:26.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util=ALL-UNNAMED
+08-Jun-2022 10:57:26.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.base/java.util.concurrent=ALL-UNNAMED
+08-Jun-2022 10:57:26.179 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: --add-opens=java.rmi/sun.rmi.transport=ALL-UNNAMED
+08-Jun-2022 10:57:26.180 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\conf\logging.properties
+08-Jun-2022 10:57:26.181 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+08-Jun-2022 10:57:26.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+08-Jun-2022 10:57:26.183 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+08-Jun-2022 10:57:26.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+08-Jun-2022 10:57:26.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13
+08-Jun-2022 10:57:26.184 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13
+08-Jun-2022 10:57:26.185 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\temp
+08-Jun-2022 10:57:26.191 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The Apache Tomcat Native library which allows using OpenSSL was not found on the java.library.path: [C:\Program Files\Java\jdk-18\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\ProgramData\chocolatey\bin;C:\MinGW\bin;C:\adb\;C:\scrcpy-win64-v1.18\;C:\Users\MG4\AppData\Local\platform-tools\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\MG4\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MG4\AppData\Local\Programs\Python\Python39\;C:\Users\MG4\AppData\Local\Microsoft\WindowsApps;C:\Users\MG4\AppData\Local\Programs\Microsoft VS Code\bin;C:\adb\;C:\Flutter_git\flutter\bin;;.]
+08-Jun-2022 10:57:26.489 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+08-Jun-2022 10:57:26.513 INFO [main] org.apache.catalina.startup.Catalina.load Server initialization in [547] milliseconds
+08-Jun-2022 10:57:26.558 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+08-Jun-2022 10:57:26.558 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet engine: [Apache Tomcat/10.0.13]
+08-Jun-2022 10:57:26.570 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\docs]
+08-Jun-2022 10:57:26.861 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\docs] has finished in [291] ms
+08-Jun-2022 10:57:26.862 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\examples]
+08-Jun-2022 10:57:27.219 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\examples] has finished in [357] ms
+08-Jun-2022 10:57:27.219 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\host-manager]
+08-Jun-2022 10:57:57.282 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\host-manager] has finished in [30,063] ms
+08-Jun-2022 10:57:57.282 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\manager]
+08-Jun-2022 10:57:57.334 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\manager] has finished in [52] ms
+08-Jun-2022 10:57:57.334 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\ROOT]
+08-Jun-2022 10:57:57.361 INFO [main] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\webapps\ROOT] has finished in [27] ms
+08-Jun-2022 10:57:57.366 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+08-Jun-2022 10:57:57.408 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in [30893] milliseconds
