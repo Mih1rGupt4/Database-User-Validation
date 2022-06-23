@@ -30,26 +30,25 @@ public class EmailService extends HttpServlet {
  
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        // reads form fields
-        String recipient = request.getParameter("docmail");
-//        String subject = request.getParameter("subject");
-//        String content = request.getParameter("content");
-        String subject = "Database User Validation OTP : ";
-        String content = "Your otp is : " + OTPController.generateOTP();
- 
-//        String resultMessage = "";
- 
+        
+    	String recipient = request.getParameter("mail").toString();
+        String subject = "Database Login OTP";
+        
+        OTPController.generateOTP();
+        String otp = OTPController.getOTP().toString();
+        String content = "Your otp is : " + otp;
         try {
             EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
                     content);
-//            resultMessage = "The e-mail was sent successfully";
+            getServletContext().getRequestDispatcher("/enter_otp.jsp").forward(
+                    request, response);
         } catch (Exception ex) {
+            //ex.printStackTrace();
+            System.out.println("EmailService doPost Error: " + ex);
             ex.printStackTrace();
-//            resultMessage = "There were an error: " + ex.getMessage();
         } 
-//        finally {
-//            getServletContext().getRequestDispatcher("/Result.jsp").forward(
-//                    request, response);
-//        }
+        finally {
+            
+        }
     }
 }

@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: url(hosp.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family:sans-serif;
+}
+
+.doclogin
+{
+    width: 400;
+    height: 420px;
+    background: black;                   
+    color:white;                         
+    top: 50%;                             /*the div will be pushed down 50% from the top*/
+    left: 50%;                            /*the div will be pushed down 50% from the left*/
+    position: absolute;                   /* positioned absolutely with reference to the closest parent that has a position relative value*/
+    transform: translate(-50%,-50%);      /*move this element left and upwards by 50% of the computed dimension along the axis*/
+    box-sizing: border-box;               /* padding and border are included in the width and height: Both divs are the same size now*/
+    padding: 70px 30px;           
+}
+h4{
+    position: absolute;
+    top: 300px;
+    left: 80px;
+}
+.doclogin input[type="checkbox"]
+{
+    position: relative;
+    top: -5px;
+    left: -160px;
+
+}
+.icon
+{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);               /* 50% moves the icon to the middle of whole webpage whereas this moves it to the middle of the login box*/
+}
+
+h1
+{
+    padding: 0 0 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 32px;
+}
+
+.doclogin p
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.doclogin input{
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.doclogin input[type="text"], input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    width: 50%;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.doclogin input[type = "button"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: red;
+    color:fff;
+    font-size: 16px;
+    align-content: center;
+    border-radius: 20px;
+}
+
+.doclogin input[type = "submit"]:hover
+{
+    cursor:pointer;
+    background: blueviolet;
+}
+
+.doclogin a
+{
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 20px;
+    color:darkgrey;
+    padding: 0 0 20px;
+}
+
+.doclogin a:hover
+{
+    color: aqua;
+}
+
+#verificat
+{
+    height: 300px;
+    width: 300px;
+    background:rgb(72, 2, 136);
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    display: block;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    font-family:sans-serif;
+    padding: 0 30px 30px;
+    color: #333;
+    transition: transform 0.4s, top 0.4s;
+    visibility: hidden;
+}
+
+#verificat input[type="Email"],input[type="OTP"]
+{
+    border:none;
+    outline: none;
+    position: relative;
+    top:0%;
+    height: 40px;
+    width: 50%;
+    align-content: center;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+#verificat button[type="submit"]
+{
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 25px;
+    position: relative;
+    top: -10%;
+    background-color:burlywood;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+#verificat button[type="sendotp"]
+{
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 25px;
+    top: 10px;
+    position: relative;
+    background-color: burlywood;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+
+h3 {
+    color:rgb(151, 148, 148);
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }

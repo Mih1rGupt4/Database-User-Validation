@@ -16,21 +16,21 @@ public class ValidateDoctorController extends HttpServlet {
     DoctorService service = null;  
     DoctorDto dto = null;
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String doctor_id = request.getParameter("did");
-		String doctor_pass = (String)request.getParameter("pass");
+		String doctor_id = request.getParameter("d_id");
+		String doctor_pass = (String)request.getParameter("d_pass");
 		service = new DoctorService();
 		String password = "";
 		try {
 			password = service.password(doctor_id);
 			if(doctor_pass.equals(password)) {
-				request.getRequestDispatcher("./EmailForm.jsp").forward(request, response);
+				request.getRequestDispatcher("./enter_email.jsp").forward(request, response);
 			}
 			else {
 				request.getRequestDispatcher("./failure.jsp").forward(request, response);
 			}
 		}
 		catch (Exception e) {
-			System.out.println("ERROR!!!!!!!!!!");
+			System.out.println("ERROR in VaidateController");
 			System.out.println(e);
 		}
 	}

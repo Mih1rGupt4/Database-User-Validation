@@ -8,22 +8,19 @@
         <title>
             Doctor Login Page
         </title>
-        <link rel="stylesheet" type="text/css" href="resources/doc_login.css"> <!-- this is used to link the doc html file to its css counter part -->
+        <link rel="stylesheet" type="text/css" href="resources/doc_email.css"> <!-- this is used to link the doc html file to its css counter part -->
                                                                   <!-- link as the name suggests is self explanatory and rel is used to define the link between the given file and the specified file -->
                                                                   <!-- style sheet refers to the css file -->
         <body>
             <div class = "doclogin">  <!-- name of the div section to be used in the css file -->
                 <img src="resources/doclogo.png" class="icon">
-                <h1>Danmix Hospitals <br> Welcome Doctor!!!!!</h1>
-                <form action="ValidateDoctorController" method="post">
-                        <p>Doctor ID</p>
-                        <input type = "text" placeholder="Enter Doc ID" name = "d_id">       <!-- Input for doc id -->
-                        <p>Password</p>                                                     <!-- Input for doc password -->
-                        <input type = "password" placeholder="Enter Password" name = "d_pass">
-                        <input type="checkbox" id="rad" name="radio" value="yes">
-                        <input type = "submit" value = "Verify" id= "log">
+                <h1>Danmix Hospitals<br> Welcome Doctor!!!!!</h1>
+                <form action="OTPController" method="post">
+                        <p>Enter OTP</p>                                               
+                        <input type = "text" placeholder="Enter OTP" name = "otp">
+                        <input type = "submit" value = "Login" id= "otp">
                 </form>
             </div>
-        </body>
+    </body>
     </head>
 </html>
