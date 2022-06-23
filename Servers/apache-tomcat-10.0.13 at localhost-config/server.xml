@@ -60,6 +60,9 @@
          Define a non-SSL/TLS HTTP/1.1 Connector on port 8080
     -->
     <Connector connectionTimeout="20000" port="8080" protocol="HTTP/1.1" redirectPort="8443"/>
+	<!-- Adding the new stuff below-->
+    <Connector SSLEnabled="true" clinetAuth="false" keystoreFile="conf\mixerdan.test.jks" keystorePass="123QWE!@#" maxThreads="200" port="8443" protocol="HTTP/1.1" scheme="https" secure="true" sslProtocol="TLS"/>
+    <!-- Adding the new stuff above-->
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
@@ -75,6 +78,9 @@
          Either JSSE or OpenSSL style configuration may be used regardless of
          the SSLImplementation selected. JSSE style configuration is used below.
     -->
+
+
+
     <!--
     <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="150" SSLEnabled="true">

@@ -19,6 +19,11 @@
               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
               xsi:schemaLocation="http://tomcat.apache.org/xml tomcat-users.xsd"
               version="1.0">
+<role rolename="manager"/>
+<role rolename="manager-gui"/>
+<role rolename="admin"/>
+<user username="admin" password="admin"
+fullName="Administrator" roles="admin,manager,manager-gui"/>
 <!--
   By default, no user is included in the "manager-gui" role required
   to operate the "/manager/html" web application.  If you wish to use this app,
@@ -35,6 +40,7 @@
   application, do not forget to remove the <!.. ..> that surrounds them. You
   will also need to set the passwords to something appropriate.
 -->
+
 <!--
   <user username="admin" password="<must-be-changed>" roles="manager-gui"/>
   <user username="robot" password="<must-be-changed>" roles="manager-script"/>

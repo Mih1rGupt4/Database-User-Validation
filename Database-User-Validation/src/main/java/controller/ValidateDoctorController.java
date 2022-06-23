@@ -23,7 +23,7 @@ public class ValidateDoctorController extends HttpServlet {
 		try {
 			password = service.password(doctor_id);
 			if(doctor_pass.equals(password)) {
-				request.getRequestDispatcher("./success.jsp").forward(request, response);
+				request.getRequestDispatcher("./EmailForm.jsp").forward(request, response);
 			}
 			else {
 				request.getRequestDispatcher("./failure.jsp").forward(request, response);

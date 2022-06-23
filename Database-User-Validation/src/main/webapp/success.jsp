@@ -7,6 +7,13 @@
 <title>Success</title>
 </head>
 <body>
-<h1 align="center">Success</h1>
+<%  
+	String msg = (String)request.getAttribute("msg");
+	
+	if(msg == null) {
+		msg=" ";
+	}
+%>
+<h1 align="center"><%=msg%></h1>
 </body>
 </html>

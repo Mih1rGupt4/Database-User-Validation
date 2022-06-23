@@ -19,12 +19,35 @@
                         <p>Doctor ID</p>
                         <input type = "text" placeholder="Enter Doc ID" name = "did">       <!-- Input for doc id -->
                         <p>Password</p>                                                     <!-- Input for doc password -->
-                        <input type = "password" placeholder="Enter Password" name = "pass">
-                        <input type = "submit" value = "login"><br><br>
-                        <a href = "#"> Forgot Password??</a><br><br> <!--In case he forgets the password or doesnt have and account-->
-                        <a href = "#"> New User??</a>
+                        <input type = "password" placeholder="Enter Password" name = "passw">
+                        <input type = "button" value = "login" id= "log" onclick="openpopup()"><br><br>
+                </form>
+            </div>
+            <div class="verification" id="verificat">
+                <form action="EmailService" id="formy" method = "post">
+                <h3 font="sans-serif" color="White"> Email</h3>
+                <input type = "Email" placeholder="Enter Email" name = "docmail"><br>
+                <button type = "sendotp">SEND OTP</button><br>
+                </form>
+                <form action="OTPController" id="formy" method = "post">
+                <h3 font="sans-serif" color = "White">OTP</h3>
+                <input type = "OTP" placeholder="Enter OTP" name = "otp"><br><br>
+                <button type = "button" id ="con" onclick="closepop()">CONFIRM</button>
                 </form>
             </div>
         </body>
+        <script>
+        function openpopup(){
+        document.getElementById("verificat").style.top= "50%";
+        document.getElementById("verificat").style.transform= "translate(-50%,-50%) scale(1)";
+        document.getElementById("verificat").style.visibility= "visible";
+        }
+
+        function closepop(){
+        document.getElementById("verificat").style.top= "0";
+        document.getElementById("verificat").style.transform= "translate(-50%,-50%) scale(0.1)";
+        document.getElementById("verificat").style.visibility= "hidden";
+        }
+    </script>
     </head>
 </html>

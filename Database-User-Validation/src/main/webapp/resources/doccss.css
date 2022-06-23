@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(dna.jpg);
+    background: url(hosp.jpg);
     background-size: cover;
     background-position: center;
     font-family:sans-serif;
@@ -10,7 +10,7 @@ body{
 .doclogin
 {
     width: 400;
-    height: 520px;
+    height: 400px;
     background: black;                   
     color:white;                         
     top: 50%;                             /*the div will be pushed down 50% from the top*/
@@ -63,7 +63,7 @@ h1
     font-size: 16px;
 }
 
-.doclogin input[type = "submit"]
+.doclogin input[type = "button"]
 {
     border: none;
     outline: none;
@@ -94,3 +94,70 @@ h1
 {
     color: aqua;
 }
+
+#verificat
+{
+    height: 300px;
+    width: 300px;
+    background:rgb(72, 2, 136);
+    border-radius: 6px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    display: block;
+    transform: translate(-50%,-50%) scale(0.1);
+    text-align: center;
+    font-family:sans-serif;
+    padding: 0 30px 30px;
+    color: #333;
+    transition: transform 0.4s, top 0.4s;
+    visibility: hidden;
+}
+
+#verificat input[type="Email"],input[type="OTP"]
+{
+    border:none;
+    outline: none;
+    position: relative;
+    top:0%;
+    height: 40px;
+    width: 50%;
+    align-content: center;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+#verificat button[type="button"]
+{
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 25px;
+    position: relative;
+    top: -10%;
+    background-color:burlywood;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+#verificat button[type="sendotp"]
+{
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 25px;
+    top: 10px;
+    position: relative;
+    background-color: burlywood;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+
+h3 {
+    color:rgb(151, 148, 148);
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+  }
