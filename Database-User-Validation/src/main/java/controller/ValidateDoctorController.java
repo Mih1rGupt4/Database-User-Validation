@@ -32,8 +32,6 @@ public class ValidateDoctorController extends HttpServlet {
 			// from the database and verify
 			service.doc_password(key);
 			
-			//System.out.println("count: " + bo.getdCount());
-			
 			// check if such doctor id exists which has password same as the input
 			if(bo.getdCount() > 0) {
 				request.getRequestDispatcher("./enter_email.jsp").forward(request, response);

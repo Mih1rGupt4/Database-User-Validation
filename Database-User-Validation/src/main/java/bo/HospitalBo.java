@@ -1,7 +1,5 @@
 package bo;
 
-import dto.HospitalDto;
-
 public class HospitalBo {
 	// Model Object
 	// Purpose: Allow data from Service class to View class object

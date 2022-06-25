@@ -34,6 +34,8 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 			ps.setString(1, vo.getD_id().trim());
 			ps.setString(2, vo.getdPassword().trim());
 			ResultSet rs = ps.executeQuery();
+			
+			//storing the resultant table values in the model class
 			if(rs.next()) {
 				dto.setdCount(rs.getInt(1));
 			}

@@ -3,6 +3,7 @@ package dto;
 public class HospitalDto {
 	// Model Object
 	// Purpose: Allow data from DAO (DatabaseAccess class) to Service class
+	
 	private static int dCount;
 	private static String d_id;
 	private static String dName;
