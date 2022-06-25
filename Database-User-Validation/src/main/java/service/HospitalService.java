@@ -1,16 +1,14 @@
 package service;
 
-import java.util.List;
+//import java.util.List;
+import bo.HospitalBo;
+import dto.HospitalDto;
 
-import bo.DoctorBo;
-import dao.DoctorDao;
-import dto.DoctorDto;
-import vo.DoctorVo;
-
-public class DoctorService {
-	DoctorDao doctorDao = null;
-//	DoctorBo doctorBo = null;
-	
+public class HospitalService {
+	HospitalDatabaseAccess dao = null;
+	HospitalDto dto = null;
+    HospitalBo bo = null;
+    
 //	public int saveStudent(DoctorVo doctorvo) {
 //		// business operation
 //		doctorDao = new DoctorDao();
@@ -42,9 +40,14 @@ public class DoctorService {
 //		return doctorDao.getDetails(rollNumber);
 //	}
 	
-	public String password(String d_id) {
-		doctorDao = new DoctorDao();
-		return doctorDao.getPassword(d_id);
+	public void doc_password(int key) {
+		bo = new HospitalBo();
+		dto = new HospitalDto();
+		
+		dao = SecurityService.getDaoObject(key);
+		dao.getPassword();
+		
+		bo.setdCount(dto.getdCount());
 	}
 	
 }

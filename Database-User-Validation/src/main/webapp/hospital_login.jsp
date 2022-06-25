@@ -8,7 +8,7 @@
         <title>
             Doctor Login Page
         </title>
-        <link rel="stylesheet" type="text/css" href="resources/doc_login.css"> <!-- this is used to link the doc html file to its css counter part -->
+        <link rel="stylesheet" type="text/css" href="resources/hospital_login.css"> <!-- this is used to link the doc html file to its css counter part -->
                                                                   <!-- link as the name suggests is self explanatory and rel is used to define the link between the given file and the specified file -->
                                                                   <!-- style sheet refers to the css file -->
         <body>
@@ -20,7 +20,10 @@
                         <input type = "text" placeholder="Enter Doc ID" name = "d_id">       <!-- Input for doc id -->
                         <p>Password</p>                                                     <!-- Input for doc password -->
                         <input type = "password" placeholder="Enter Password" name = "d_pass">
-                        <input type="checkbox" id="rad" name="radio" value="yes">
+                        <input type="radio" id="radioA" name="radio_key" value=0>
+                        <label for="radioA">No-Security</label>
+                        <input type="radio" id="radioB" name="radio_key" value=1>
+                        <label for="radioB">Security</label><br>
                         <input type = "submit" value = "Verify" id= "log">
                 </form>
             </div>

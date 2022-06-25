@@ -25,13 +25,6 @@ h4{
     top: 300px;
     left: 80px;
 }
-.doclogin input[type="checkbox"]
-{
-    position: relative;
-    top: -5px;
-    left: -160px;
-
-}
 .icon
 {
     width: 100px;
@@ -62,7 +55,7 @@ h1
 
 }
 
-.doclogin input[type="text"], input[type="password"]
+.doclogin input[type="text"]
 {
     border: none;
     border-bottom: 1px solid white;
@@ -70,15 +63,21 @@ h1
     outline: none;
     width: 50%;
     height: 40px;
+    position: absolute;
+    top: 225px;
     color: white;
     font-size: 16px;
 }
 
-.doclogin input[type = "button"]
+.doclogin button[type = "submit"]
 {
     border: none;
     outline: none;
     height: 40px;
+    width: 200px;
+    position: absolute;
+    top: 300px;
+    left: 25%;
     background: red;
     color:fff;
     font-size: 16px;
@@ -86,89 +85,8 @@ h1
     border-radius: 20px;
 }
 
-.doclogin input[type = "submit"]:hover
+.doclogin button[type = "submit"]:hover
 {
     cursor:pointer;
     background: blueviolet;
 }
-
-.doclogin a
-{
-    text-decoration: none;
-    font-size: 16px;
-    line-height: 20px;
-    color:darkgrey;
-    padding: 0 0 20px;
-}
-
-.doclogin a:hover
-{
-    color: aqua;
-}
-
-#verificat
-{
-    height: 300px;
-    width: 300px;
-    background:rgb(72, 2, 136);
-    border-radius: 6px;
-    position: fixed;
-    top: 0;
-    left: 50%;
-    display: block;
-    transform: translate(-50%,-50%) scale(0.1);
-    text-align: center;
-    font-family:sans-serif;
-    padding: 0 30px 30px;
-    color: #333;
-    transition: transform 0.4s, top 0.4s;
-    visibility: hidden;
-}
-
-#verificat input[type="Email"],input[type="OTP"]
-{
-    border:none;
-    outline: none;
-    position: relative;
-    top:0%;
-    height: 40px;
-    width: 50%;
-    align-content: center;
-    background: transparent;
-    border-bottom: 1px solid black;
-}
-#verificat button[type="submit"]
-{
-    border: none;
-    outline: none;
-    width: 200px;
-    height: 25px;
-    position: relative;
-    top: -10%;
-    background-color:burlywood;
-    border-radius: 20px;
-    font-family: sans-serif;
-}
-#verificat button[type="sendotp"]
-{
-    border: none;
-    outline: none;
-    width: 100px;
-    height: 25px;
-    top: 10px;
-    position: relative;
-    background-color: burlywood;
-    border-radius: 20px;
-    font-family: sans-serif;
-}
-
-h3 {
-    color:rgb(151, 148, 148);
-    display: block;
-    font-size: 1.17em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    margin-left: 0;
-    margin-right: 0;
-    font-weight: bold;
-  }
