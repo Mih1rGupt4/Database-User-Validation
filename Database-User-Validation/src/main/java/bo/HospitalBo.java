@@ -3,7 +3,9 @@ package bo;
 import dto.HospitalDto;
 
 public class HospitalBo {
-	//Doctor(did,dname, dpass, dspecialty, pid varchar, primary key: did,foreign key: pid references patient(pid))
+	// Model Object
+	// Purpose: Allow data from Service class to View class object
+	
 	private static int dCount;
 	private static String d_id;
 	private static String dName;

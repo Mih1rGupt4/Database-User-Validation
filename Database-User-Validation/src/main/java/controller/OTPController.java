@@ -13,21 +13,18 @@ import java.io.IOException;
 
 @WebServlet("/OTPController")
 public class OTPController extends HttpServlet{
-	
+	// Logic to generate and verify the otp
 	private static String otp;
 	private static String user_otp;
-	public void OTPGenerator() {
-		
-	}
 	
 	public static String getOTP() {
 		return otp;
 	}
-	
 	public static void setOTP(String pass) {
 		otp = pass; 
 	}
 	
+	// function that generates OTP
 	public static void generateOTP() {
 	      String numbers = "1234567890";
 	      Random random = new Random();
@@ -41,24 +38,22 @@ public class OTPController extends HttpServlet{
 	
 	protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
-        // reads form fields
+		
 		String resultMessage = "";
+        
+		// read form fields
 		user_otp = request.getParameter("otp").toString();
+		
+		// Verifying if user otp input matches
 		if(otp.equals(user_otp)) {
 			resultMessage = "OTP verified";
+			request.setAttribute("msg", resultMessage);
+			getServletContext().getRequestDispatcher("/view_patients.jsp").forward(
+	        		request, response);
 		}
 		else {
-			resultMessage = "OTP Failed";
-		}
-		try {
-			request.setAttribute("msg", resultMessage);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-            System.out.print("OTP POST ERROR ="+ex);
-            resultMessage = "There were an error: " + ex.getMessage();
-        } finally {
-        	getServletContext().getRequestDispatcher("/success.jsp").forward(
+			getServletContext().getRequestDispatcher("/failure.jsp").forward(
 	        		request, response);
-        }
+		}
     }
 }

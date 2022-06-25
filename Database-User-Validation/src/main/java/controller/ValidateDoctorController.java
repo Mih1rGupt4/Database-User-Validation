@@ -22,14 +22,19 @@ public class ValidateDoctorController extends HttpServlet {
 		vo = new HospitalVo();
 		bo = new HospitalBo();
 		
+		// read form fields
 		vo.setD_id(request.getParameter("d_id").toString());
 		vo.setdPassword(request.getParameter("d_pass").toString());
 		int key = Integer.parseInt(request.getParameter("radio_key"));
 		
 		try {
+			// initiate logic to execute query to get doctor password
+			// from the database and verify
 			service.doc_password(key);
 			
-			System.out.println("count: " + bo.getdCount());
+			//System.out.println("count: " + bo.getdCount());
+			
+			// check if such doctor id exists which has password same as the input
 			if(bo.getdCount() > 0) {
 				request.getRequestDispatcher("./enter_email.jsp").forward(request, response);
 			}

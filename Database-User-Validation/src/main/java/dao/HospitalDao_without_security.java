@@ -25,11 +25,15 @@ public class HospitalDao_without_security extends HospitalDatabaseAccess {
 		dto = new HospitalDto();
 		vo = new HospitalVo();
 		try {
-			connect = DataBaseConnection.getConnection(); 
+			// connection to database
+			// and execute given SQL query
 			PASSWORD_VALIDATE_QUERY = "select count(dId) from doctor where dId = '" + vo.getD_id() + "' and dPassword ='"+ vo.getdPassword() + "';";
+			
+			connect = DataBaseConnection.getConnection(); 
 			stmt = connect.createStatement();
-			//PreparedStatement ps = connect.prepareStatement(PASSWORD_VALIDATE_QUERY);
 			ResultSet rs = stmt.executeQuery(PASSWORD_VALIDATE_QUERY);
+			
+			//storing the resultant table values in the model class
 			if(rs.next()) {
 				dto.setdCount(rs.getInt(1));
 			}

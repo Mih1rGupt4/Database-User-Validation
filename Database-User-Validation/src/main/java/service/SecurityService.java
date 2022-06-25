@@ -2,7 +2,9 @@ package service;
 
 import dao.*;
 public class SecurityService {
-	 public static HospitalDatabaseAccess getDaoObject(int key) {
+	// return object of the DatabaseAccess class 
+	// based on security option selected
+	public static HospitalDatabaseAccess getDaoObject(int key) {
 		 if(key == 0) {
 			return new HospitalDao_without_security();
 			

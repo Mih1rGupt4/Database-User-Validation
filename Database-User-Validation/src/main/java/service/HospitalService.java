@@ -8,45 +8,17 @@ public class HospitalService {
 	HospitalDatabaseAccess dao = null;
 	HospitalDto dto = null;
     HospitalBo bo = null;
-    
-//	public int saveStudent(DoctorVo doctorvo) {
-//		// business operation
-//		doctorDao = new DoctorDao();
-//		doctorBo = new DoctorBo();
-//		
-//		doctorBo.set_did(doctorvo.get_did());
-//		doctorBo.setdName(doctorvo.getdName());
-//		doctorBo.setdPassword(doctorvo.getdPassword());
-//		doctorBo.setdSpecialty(doctorvo.getdSpecialty());
-//		doctorBo.setpid(doctorvo.getpid());
-//		
-//		
-//		int i = doctorDao.addStudent(doctorBo);
-//		return i;
-//	}
-	
-//	public List<DoctorDto> getAllStudents() {
-//		doctorDao = new DoctorDao();
-//		return doctorDao.viewStudents();
-//	}
-//	
-//	public boolean removeStudent(int rollNumber) {
-//		doctorDao = new DoctorDao();
-//		return doctorDao.delete(rollNumber);
-//	}
-//	
-//	public DoctorDto searchStudent(int rollNumber) {
-//		doctorDao = new DoctorDao();
-//		return doctorDao.getDetails(rollNumber);
-//	}
 	
 	public void doc_password(int key) {
 		bo = new HospitalBo();
 		dto = new HospitalDto();
 		
+		// get object of databaseaccess class
+		// as the security opetion selected  
 		dao = SecurityService.getDaoObject(key);
 		dao.getPassword();
 		
+		// transfer data from databaseaccessobject to the controller
 		bo.setdCount(dto.getdCount());
 	}
 	

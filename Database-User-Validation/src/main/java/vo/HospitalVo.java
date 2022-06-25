@@ -1,9 +1,9 @@
 package vo;
 
-import dto.HospitalDto;
-
 public class HospitalVo {
-	//Doctor(did,dname, dpass, dspecialty, pid varchar, primary key: did,foreign key: pid references patient(pid))
+	// Model Object
+	// Purpose: Allow data from Controller class to Service class 
+	
 	private static int dCount;
 	private static String d_id;
 	private static String dName;

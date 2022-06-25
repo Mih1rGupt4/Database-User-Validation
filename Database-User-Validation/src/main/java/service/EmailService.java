@@ -31,12 +31,16 @@ public class EmailService extends HttpServlet {
     protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
         
+    	// read form field
     	String recipient = request.getParameter("mail").toString();
         String subject = "Database Login OTP";
         
+        // generate otp and add it to the body content of the email
         OTPController.generateOTP();
         String otp = OTPController.getOTP().toString();
         String content = "Your otp is : " + otp;
+        
+        // invoking function to send email
         try {
             EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
                     content);
