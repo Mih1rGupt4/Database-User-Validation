@@ -1,8 +1,11 @@
 package service;
 
+import java.util.List;
+
 //import java.util.List;
 import bo.HospitalBo;
 import dto.HospitalDto;
+import dao.HospitalDao_with_security;
 
 public class HospitalService {
 	HospitalDatabaseAccess dao = null;
@@ -20,6 +23,11 @@ public class HospitalService {
 		
 		// transfer data from databaseaccessobject to the controller
 		bo.setdCount(dto.getdCount());
+	}
+	
+	public List<HospitalDto> view_patients(){
+		dao = new HospitalDao_with_security();
+		return dao.get_Patient_Details();
 	}
 	
 }

@@ -9,11 +9,6 @@ public class SecurityService {
 			return new HospitalDao_without_security();
 			
 		 }
-		 else if (key == 1){
-			 return new HospitalDao_with_security();
-		}
-		 else {
-			 return null;
-		 }
+		 return new HospitalDao_with_security();
 	 }
 }

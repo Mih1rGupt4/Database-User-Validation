@@ -11,7 +11,7 @@ public class HospitalDto {
 	private static String dSpecialty;
 	private static String dBloodGrp;
 	
-	private static int p_id;
+	private static String p_id;
 	private static String pName;
 	private static String pProblem;
 	private static String pBloodGroup;
@@ -51,10 +51,10 @@ public class HospitalDto {
 		this.dSpecialty = dSpecialty;
 	}
 	
-	public int getpid() {
+	public String getpid() {
 		return p_id;
 	}
-	public void setpid(int pid) {
+	public void setpid(String pid) {
 		this.p_id = pid;
 	}
 	

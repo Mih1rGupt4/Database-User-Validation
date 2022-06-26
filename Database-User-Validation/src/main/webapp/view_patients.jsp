@@ -1,3 +1,8 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="dto.HospitalDto"%>
+<%@page import="vo.HospitalVo"%>
+<%@page import="java.util.List" %>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -5,9 +10,12 @@
     <head>
     <meta http-equiv="Content-Type" content="text/html; charset="ISO-8859-1">
         <title>Patients</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="resources/style.css">
     </head>
     <body>
+    	<%
+			List<HospitalDto> list = (ArrayList<HospitalDto>)request.getAttribute("patientList");
+		%>
         <header>
            <img src="doclogo.png">
             <nav>
@@ -29,24 +37,27 @@
                 <h3>Speciality:</h3><h4></h4><br><br>
                 </div>
             <div class = "patients">
-                <img src="">
                 <h1>Patient Details</h1>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <th>DOB</th>
-                        <th>Blood Group</th>
-                        <th>Medical Issue</th>
-                    </tr>
-                    <tr>
-                        <!-- FETCHING DATA FROM EACH
-                            ROW OF EVERY COLUMN -->
-                        <td>James</td>
-                        <td>1999</td>
-                        <td>0</td>
-                        <td>Diabetes</td>
-                    </tr>
-                </table>
+                
+                <table style="padding:5px" border="1px">
+					<thead> 
+						<tr> 
+							 <td>Patient ID</td>
+							 <td>Patient Name</td>
+							 <td>Problem</td>
+							 <td>Blood Group</td>
+						</tr>		
+					</thead>
+					<% for(HospitalDto d : list) { %>
+							<tr>
+								<td> <%=d.getpid() %> </td>
+								<td> <%=d.getpName() %> </td>
+								<td> <%=d.getpProblem() %> </td>
+								<td> <%=d.getpBloodGroup() %> </td>
+							</tr>
+					 <%}%>
+					
+				</table>
             </div>
     </body>
 </html>

@@ -8,10 +8,13 @@
         <title>
             Doctor Login Page
         </title>
-        <link rel="stylesheet" type="text/css" href="resources/hospital.css"> <!-- this is used to link the doc html file to its css counter part -->
+        <link rel="stylesheet" type="text/css" href="resources/hospital_email.css"> <!-- this is used to link the doc html file to its css counter part -->
                                                                   <!-- link as the name suggests is self explanatory and rel is used to define the link between the given file and the specified file -->
                                                                   <!-- style sheet refers to the css file -->
-        <body>
+    <body>
+    		<p>OTP expire in : </p>
+    		<p id = "countdown"></p>
+            <script src="count.js"></script>
             <div class = "doclogin">  <!-- name of the div section to be used in the css file -->
                 <img src="resources/doclogo.png" class="icon">
                 <h1>Danmix Hospitals<br> Welcome Doctor!!!!!</h1>

@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import util.EmailUtility;
 import controller.OTPController;
+import java.time.Instant;
 
 @WebServlet("/EmailService")
 public class EmailService extends HttpServlet {
@@ -44,6 +45,13 @@ public class EmailService extends HttpServlet {
         try {
             EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
                     content);
+            
+            // check the server time
+            // and store the unix timestamp
+            // unix timestamp is independent of different time zones
+            Instant t1 = Instant.now();
+            long timestamp = t1.getEpochSecond();
+            (new OTPController()).setTimestamp(timestamp);
             getServletContext().getRequestDispatcher("/enter_otp.jsp").forward(
                     request, response);
         } catch (Exception ex) {

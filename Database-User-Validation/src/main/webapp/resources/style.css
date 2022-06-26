@@ -1,0 +1,105 @@
+header img {
+    height: 80px;
+    margin-left: 40px;
+}
+body {
+    height: 125vh;
+    background-image: url('https://codetheweb.blog/assets/img/posts/style-a-navigation-bar-css/background.jpg');
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 80px;
+    padding: 30px;
+}
+
+main {
+    color: white;
+}
+
+header {
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+    z-index: 2;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.patients{
+    background-color: white;
+    z-index: 0;
+    width: 800px;
+    height: 600px;                      
+    top: 60%;                             /*the div will be pushed down 50% from the top*/
+    left: 70%;                            /*the div will be pushed down 50% from the left*/
+    position: absolute;                   /* positioned absolutely with reference to the closest parent that has a position relative value*/
+    transform: translate(-50%,-50%);      /*move this element left and upwards by 50% of the computed dimension along the axis*/
+    box-sizing: border-box;               /* padding and border are included in the width and height: Both divs are the same size now*/
+    padding: 70px 30px;
+
+}
+
+.doctor
+{
+    background-color: black;
+    z-index: 0;
+    width: 400px;
+    height: 600px;
+    background: black;                   
+    color:white;                         
+    top: 60%;                             /*the div will be pushed down 50% from the top*/
+    left: 20%;                            /*the div will be pushed down 50% from the left*/
+    position: absolute;                   /* positioned absolutely with reference to the closest parent that has a position relative value*/
+    transform: translate(-50%,-50%);      /*move this element left and upwards by 50% of the computed dimension along the axis*/
+    box-sizing: border-box;               /* padding and border are included in the width and height: Both divs are the same size now*/
+    padding: 70px 30px;
+}
+
+h1{
+    
+    position: relative;
+    top: -10%;
+    left: 40%;
+    font-weight: lighter;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+table {
+    margin: 0 auto;
+    font-size: large;
+    border: 1px solid black;
+}
+
+td {
+    background-color: #E4F5D4;
+    border: 1px solid black;
+}
+
+th,
+td {
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    font-weight: lighter;
+}
