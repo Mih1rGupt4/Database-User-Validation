@@ -7,7 +7,7 @@ function updateCountdown(){
     const minutes = Math.floor(time/60);
     let seconds = time % 60;
 
-    seconds = seconds < 0 ? window.location.href="hospital_email.html" : seconds;
+    seconds = seconds < 0 ? window.location.href="hospital_email.jsp" : seconds;
 
     document.getElementById("countdown").innerHTML = `${minutes}: ${seconds}`;
     time--;

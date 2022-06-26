@@ -17,7 +17,7 @@
 			List<HospitalDto> list = (ArrayList<HospitalDto>)request.getAttribute("patientList");
 		%>
         <header>
-           <img src="doclogo.png">
+           <img src="resources/doclogo.png">
             <nav>
                 <ul>
                     <li><a href="#">Home</a></li>
@@ -35,7 +35,7 @@
                 <h3>DOB:</h3><h4></h4><br><br>
                 <h3>Blood Group:</h3><h4></h4><br><br>
                 <h3>Speciality:</h3><h4></h4><br><br>
-                </div>
+            </div>
             <div class = "patients">
                 <h1>Patient Details</h1>
                 
