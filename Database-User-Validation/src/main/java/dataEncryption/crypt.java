@@ -13,7 +13,7 @@ public class crypt {
         keyGenerator.init(128); // block size is 128bits
         SecretKey secretKey = keyGenerator.generateKey(); 
         String encryptedText = encrypt(plainText, secretKey);
-        String decryptedText = decrypt(encryptedText, secretKey);
+        String decryptedText = decrypt(plainText, secretKey);
         if(function == 'e')
             return encryptedText;
         else if(function == 'd')
