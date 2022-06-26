@@ -53,6 +53,7 @@ header li a {
     transform: translate(-50%,-50%);      /*move this element left and upwards by 50% of the computed dimension along the axis*/
     box-sizing: border-box;               /* padding and border are included in the width and height: Both divs are the same size now*/
     padding: 70px 30px;
+    overflow: auto;
 
 }
 
@@ -80,26 +81,37 @@ h1{
     font-weight: lighter;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-table {
-    margin: 0 auto;
-    font-size: large;
-    border: 1px solid black;
+.styled-table {
+    position: absolute;
+    left: 25%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
 }
 
-td {
-    background-color: #E4F5D4;
-    border: 1px solid black;
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
 }
 
-th,
-td {
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+.styled-table tbody tr.active-row {
     font-weight: bold;
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
-}
-
-td {
-    font-weight: lighter;
+    color: #009879;
 }
