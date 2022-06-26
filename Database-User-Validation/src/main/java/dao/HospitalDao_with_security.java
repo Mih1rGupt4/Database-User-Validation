@@ -17,6 +17,7 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 	private final String PASSWORD_VALIDATE_QUERY = "select count(dId) from doctor where dId= ? and dPassword= ?;";
 	private final String UPDATE_OTP_QUERY = "update doctor set otp = ? where dId = ?";
 	private final String VIEW_PATIENT_DETAILS_QUERY = "select pid, pname, pprob, pbgrp from patient";
+	private final String VIEW_DOCTOR_DETAILS_QUERY = "select dName, dspecialtly, dbgrp from doctor";
 	HospitalDto dto = null;
 	HospitalVo vo = null;
 	Connection connect = null;
@@ -88,6 +89,14 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 				dto.setpProblem(rs.getString(3));
 				dto.setpBloodGroup(rs.getString(4));
 				patients_List.add(dto);
+			}
+			
+			PreparedStatement ps1 = connect.prepareStatement(VIEW_DOCTOR_DETAILS_QUERY);
+			ResultSet rs1 = ps1.executeQuery();
+			if(rs1.next()) {
+				vo.setdName(rs1.getString(1));
+				vo.setdSpecialty(rs1.getString(2));
+				vo.setdBloodGrp(rs1.getString(3));
 			}
 		}
 		catch (Exception e) {

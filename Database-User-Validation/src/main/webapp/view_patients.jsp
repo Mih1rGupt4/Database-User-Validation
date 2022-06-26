@@ -32,7 +32,6 @@
                 <img src="">
                 <h1> Doctor</h1>
                 <h3>Name:</h3><h4></h4><br><br>
-                <h3>DOB:</h3><h4></h4><br><br>
                 <h3>Blood Group:</h3><h4></h4><br><br>
                 <h3>Speciality:</h3><h4></h4><br><br>
             </div>
