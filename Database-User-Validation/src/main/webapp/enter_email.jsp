@@ -17,7 +17,7 @@
                 <h1>Danmix Hospitals<br> Welcome Doctor!!!!!</h1>
                 <form action="EmailService" method="post">
                         <p>Email for verification</p>                                               
-                        <input type = "text" placeholder="Enter Email" name = "mail">
+                        <input type = "email" placeholder="Enter Email" name = "mail">
                         <input type = "submit" value = "Send OTP" id= "otp">
                 </form>
             </div>

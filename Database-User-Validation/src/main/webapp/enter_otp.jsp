@@ -20,7 +20,7 @@
                 <h1>Danmix Hospitals<br> Welcome Doctor!!!!!</h1>
                 <form action="OTPController" method="post">
                         <p>Enter OTP</p>                                               
-                        <input type = "text" placeholder="Enter OTP" name = "otp">
+                        <input type = "otp" placeholder="Enter OTP" name = "otp">
                         <input type = "submit" value = "Login" id= "otp">
                 </form>
             </div>
