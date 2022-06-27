@@ -65,9 +65,9 @@ public class HospitalDao_without_security extends HospitalDatabaseAccess {
 	}
 	
 	@Override
-	public List<HospitalDto> get_Patient_Details() {
+	public ArrayList<HospitalDto> get_Patient_Details() {
 		HospitalDto dto = null;
-		List<HospitalDto> patients_List = new ArrayList<HospitalDto>();
+		ArrayList<HospitalDto> patients_List = new ArrayList<HospitalDto>();
 		
 		try {
 			dto = new HospitalDto();

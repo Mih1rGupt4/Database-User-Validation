@@ -89,6 +89,11 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 				dto.setpProblem(rs.getString(3));
 				dto.setpBloodGroup(rs.getString(4));
 				patients_List.add(dto);
+//				System.out.println(patients_List);
+			}
+			
+			for(HospitalDto d: patients_List) {
+				System.out.println("id" + d.getpid());
 			}
 			
 			PreparedStatement ps1 = connect.prepareStatement(VIEW_DOCTOR_DETAILS_QUERY);

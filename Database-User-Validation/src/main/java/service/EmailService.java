@@ -11,7 +11,11 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import util.EmailUtility;
 import controller.OTPController;
+import dto.HospitalDto;
+
 import java.time.Instant;
+import java.util.ArrayList;
+import java.util.List;
 
 @WebServlet("/EmailService")
 public class EmailService extends HttpServlet {
@@ -43,17 +47,25 @@ public class EmailService extends HttpServlet {
         
         // invoking function to send email
         try {
-            EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
-                    content);
+//            EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
+//                    content);
+            
+            HospitalService service = new HospitalService();
+            List<HospitalDto> list = service.view_patients();
+			request.setAttribute("patientList", list);
+			getServletContext().getRequestDispatcher("/view_patients.jsp").forward(
+	        		request, response);
+            
             
             // check the server time
             // and store the unix timestamp
             // unix timestamp is independent of different time zones
-            Instant t1 = Instant.now();
-            long timestamp = t1.getEpochSecond();
-            (new OTPController()).setTimestamp(timestamp);
-            getServletContext().getRequestDispatcher("/enter_otp.jsp").forward(
-                    request, response);
+            
+//            Instant t1 = Instant.now();
+//            long timestamp = t1.getEpochSecond();
+//            (new OTPController()).setTimestamp(timestamp);
+//            getServletContext().getRequestDispatcher("/enter_otp.jsp").forward(
+//                    request, response);
         } catch (Exception ex) {
             //ex.printStackTrace();
             System.out.println("EmailService doPost Error: " + ex);

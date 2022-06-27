@@ -2,6 +2,7 @@
 <%@page import="dto.HospitalDto"%>
 <%@page import="vo.HospitalVo"%>
 <%@page import="java.util.List" %>
+<% HospitalVo vo = new HospitalVo(); %>
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
@@ -14,7 +15,7 @@
     </head>
     <body>
     	<%
-			List<HospitalDto> list = (ArrayList<HospitalDto>)request.getAttribute("patientList");
+    	ArrayList<HospitalDto> list = (ArrayList<HospitalDto>)request.getAttribute("patientList");
 		%>
         <header>
            <img src="resources/doclogo.png">
@@ -31,9 +32,9 @@
             <div class = "doctor">
                 <img src="">
                 <h1> Doctor</h1>
-                <h3>Name:</h3><h4></h4><br><br>
-                <h3>Blood Group:</h3><h4></h4><br><br>
-                <h3>Speciality:</h3><h4></h4><br><br>
+                <h3>Name:</h3><h4><%=vo.getdName() %></h4><br><br>
+                <h3>Blood Group:</h3><h4><%=vo.getdBloodGrp() %></h4><br><br>
+                <h3>Speciality:</h3><h4><%=vo.getdSpecialty() %></h4><br><br>
             </div>
             <div class = "patients">
                 <h1>Patient Details</h1>
@@ -49,12 +50,12 @@
 					</thead>
 					<% for(HospitalDto d : list) { %>
 							<tr>
-								<td> <%=d.getpid() %> </td>
-								<td> <%=d.getpName() %> </td>
-								<td> <%=d.getpProblem() %> </td>
-								<td> <%=d.getpBloodGroup() %> </td>
+								<td><%=d.getpid() %></td>
+								<td><%=d.getpName() %></td>
+								<td><%=d.getpProblem() %></td>
+								<td><%=d.getpBloodGroup() %></td>
 							</tr>
-					 <%}%>
+					<% } %>
 					
 				</table>
             </div>

@@ -12,7 +12,7 @@
                                                                   <!-- link as the name suggests is self explanatory and rel is used to define the link between the given file and the specified file -->
                                                                   <!-- style sheet refers to the css file -->
     <body>
-    		<p>OTP expire in : </p>
+    		
     		<p id = "countdown"></p>
             <script src="count.js"></script>
             <div class = "doclogin">  <!-- name of the div section to be used in the css file -->
@@ -21,6 +21,7 @@
                 <form action="OTPController" method="post">
                         <p>Enter OTP</p>                                               
                         <input type = "otp" placeholder="Enter OTP" name = "otp">
+                        <h4 id="timeleft">Time Left</h4>
                         <input type = "submit" value = "Login" id= "otp">
                 </form>
             </div>
