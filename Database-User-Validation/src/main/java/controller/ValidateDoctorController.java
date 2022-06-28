@@ -26,9 +26,14 @@ public class ValidateDoctorController extends HttpServlet {
 		bo = new HospitalBo();
 		
 //		read form fields
-		vo.setD_id(request.getParameter("d_id").toString());
-		vo.setdPassword(request.getParameter("d_pass").toString());
-		int key = Integer.parseInt(request.getParameter("radio_key"));
+		vo.setD_id(request.getParameter("d_id"));
+		vo.setdPassword(request.getParameter("d_pass"));
+		int key;
+		try {
+			key = Integer.parseInt(request.getParameter("radio_key"));
+		}catch (Exception e) {
+			key = 0;
+		}
 		
 		try {
 //			initiate logic to execute query to get doctor password
