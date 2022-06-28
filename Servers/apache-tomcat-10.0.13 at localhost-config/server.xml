@@ -75,9 +75,51 @@
          Either JSSE or OpenSSL style configuration may be used regardless of
          the SSLImplementation selected. JSSE style configuration is used below.
     -->
-
-
-
+<!-- Adding the new stuff below-->
+<!--
+     <Connector port="443" maxHttpHeaderSize="8192" maxThreads="100"
+           minSpareThreads="25" maxSpareThreads="75"
+           enableLookups="false" disableUploadTimeout="true"
+           acceptCount="100" scheme="https" secure="true"
+           SSLEnabled="true" clientAuth="false"
+           sslProtocol="TLS"
+           keystoreFile="conf/localhost.pfx"
+           keystorePass="123qwe" keystoreType="PKCS12"/>
+-->
+<!--
+     <Connector
+           protocol="org.apache.coyote.http11.Http11NioProtocol"
+           port="8443" maxThreads="200"
+           scheme="https" secure="true" SSLEnabled="true"
+           keystoreFile="mixerdan.jks" keystorePass="123QWE!@#"
+           clientAuth="false" sslProtocol="TLS"/>
+            
+     <Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+               maxThreads="150" scheme="https" secure="true"
+               keystoreFile="conf/mixerdan.test.jks" keystorePass="123QWE!@#"
+               clientAuth="false" sslProtocol="TLS" sslVerifyClient="optional"
+			   sslEnabledProtocols="TLSv1.2,TLSv1.1,SSLv2Hello"/>
+           --> 
+     
+<!--<Connector port="8443" 
+  maxThreads="150" scheme="https" secure="true" 
+  SSLEngine="on" 
+  SSLCertificateFile="mixerdan.test.crt" 
+  SSLCertificateKeyFile="myCA.pem" 
+  SSLPassword="123QWE!@#" 
+  clientAuth="false" sslProtocol="TLS"/> -->
+<!--
+<Connector
+	protocol="HTTP/1.1"
+	port="8443" maxThreads="200"
+     connectionTimeout="20000" redirectPort="8443"
+	scheme="https" secure="true" SSLEnabled="true"
+     sslProtocol="TLS"
+	keystoreFile="E:\NHCE\Second Year\4th Sem\Mini Project 2\Database-User-Validation\apache-tomcat-10.0.13\conf\mixerdan.jks" 
+     keystorePass="123QWE!@#"
+	 />
+      -->
+<!-- Adding the new stuff above-->
     <!--
     <Connector port="8443" protocol="org.apache.coyote.http11.Http11NioProtocol"
                maxThreads="150" SSLEnabled="true">
