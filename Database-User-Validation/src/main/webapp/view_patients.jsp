@@ -39,7 +39,7 @@
             <div class = "patients">
                 <h1>Patient Details</h1>
                 
-                <table style="padding:5px" border="1px">
+                <table class = "styled-table">
 					<thead> 
 						<tr> 
 							 <td>Patient ID</td>
