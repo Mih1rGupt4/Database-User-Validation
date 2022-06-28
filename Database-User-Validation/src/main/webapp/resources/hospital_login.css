@@ -116,3 +116,19 @@ h3 {
     margin-right: 0;
     font-weight: bold;
   }
+
+  #securityoption
+  {
+  	position: absolute;
+  	top: 62.5%;
+  	left:15%; 
+  	
+  }
+  
+   #securityoption1
+  {
+  	position: absolute;
+  	top: 70%;
+  	
+  	left:15%; 
+  }
