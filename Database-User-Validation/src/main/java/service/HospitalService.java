@@ -1,9 +1,7 @@
 package service;
 
-import java.util.ArrayList;
 import java.util.List;
 
-//import java.util.List;
 import bo.HospitalBo;
 import dto.HospitalDto;
 import dao.HospitalDao_with_security;
@@ -17,12 +15,12 @@ public class HospitalService {
 		bo = new HospitalBo();
 		dto = new HospitalDto();
 		
-		// get object of databaseaccess class
-		// as the security opetion selected  
+//		get object of databaseaccess class
+//		as the security option selected  
 		dao = SecurityService.getDaoObject(key);
-		dao.getPassword();
+		dto = dao.getPassword();
 		
-		// transfer data from databaseaccessobject to the controller
+//		transfer data from databaseaccessobject to the controller
 		bo.setdCount(dto.getdCount());
 	}
 	

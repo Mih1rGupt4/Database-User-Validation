@@ -4,17 +4,17 @@ public class HospitalDto {
 	// Model Object
 	// Purpose: Allow data from DAO (DatabaseAccess class) to Service class
 	
-	private static int dCount;
-	private static String d_id;
-	private static String dName;
-	private static String dPassword;
-	private static String dSpecialty;
-	private static String dBloodGrp;
+	private int dCount;
+	private String d_id;
+	private String dName;
+	private String dPassword;
+	private String dSpecialty;
+	private String dBloodGrp;
 	
-	private static String p_id;
-	private static String pName;
-	private static String pProblem;
-	private static String pBloodGroup;
+	private String p_id;
+	private String pName;
+	private String pProblem;
+	private String pBloodGroup;
 	
 	
 	public int getdCount() {

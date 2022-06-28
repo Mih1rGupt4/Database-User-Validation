@@ -36,20 +36,20 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 		}
 	}
 	@Override
-	public void getPassword() {
-		// database operation logic
+	public HospitalDto getPassword() {
+//		database operation logic
 		try {
 			dto = new HospitalDto();
 			vo = new HospitalVo();
 			
-			// connection to database
-			// and execute given SQL query
+//			connection to database
+//			and execute given SQL query
 			connect = DataBaseConnection.getConnection(); 
 			PreparedStatement ps = connect.prepareStatement(PASSWORD_VALIDATE_QUERY);
 			
-			// typecaste values to SQL datatypes
-			// String to varchar()
-			// the entire string will be read as a varchar by the database
+//			typecaste values to SQL datatypes
+//			String to varchar()
+//			the entire string will be read as a varchar by the database
 			ps.setString(1, vo.getD_id().trim());
 			ps.setString(2, vo.getdPassword().trim());
 			ResultSet rs = ps.executeQuery();
@@ -65,6 +65,7 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 		catch (Exception e) {
 			e.printStackTrace();
 		}
+		return dto;
 	}
 	@Override
 	public List<HospitalDto> get_Patient_Details() {
@@ -75,13 +76,13 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 			dto = new HospitalDto();
 			vo = new HospitalVo();
 			
-			// connection to database
-			// and execute given SQL query
+//			connection to database
+//			and execute given SQL query
 			connect = DataBaseConnection.getConnection(); 
 			PreparedStatement ps = connect.prepareStatement(VIEW_PATIENT_DETAILS_QUERY);
 			ResultSet rs = ps.executeQuery();
 			
-			//storing the resultant table values in the model dto class
+//			storing the resultant table values in the model dto class
 			while(rs.next()) {
 				dto = new HospitalDto();
 				dto.setpid(rs.getString(1));
@@ -89,11 +90,6 @@ public class HospitalDao_with_security extends HospitalDatabaseAccess {
 				dto.setpProblem(rs.getString(3));
 				dto.setpBloodGroup(rs.getString(4));
 				patients_List.add(dto);
-//				System.out.println(patients_List);
-			}
-			
-			for(HospitalDto d: patients_List) {
-				System.out.println("id" + d.getpid());
 			}
 			
 			PreparedStatement ps1 = connect.prepareStatement(VIEW_DOCTOR_DETAILS_QUERY);

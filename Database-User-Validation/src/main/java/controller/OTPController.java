@@ -15,7 +15,7 @@ import service.HospitalService;
 
 @WebServlet("/OTPController")
 public class OTPController extends HttpServlet{
-	// Logic to generate and verify the otp
+//	Logic to generate and verify the otp
 	private static String otp;
 	private static String user_otp;
 	private static long timestamp;
@@ -36,7 +36,7 @@ public class OTPController extends HttpServlet{
 		this.timestamp = timestamp;
 	}
 	
-	// function that generates OTP
+//	function that generates OTP
 	public static void generateOTP() {
 	      String numbers = "1234567890";
 	      Random random = new Random();
@@ -51,25 +51,21 @@ public class OTPController extends HttpServlet{
 	protected void doPost(HttpServletRequest request,
             HttpServletResponse response) throws ServletException, IOException {
 		
-		String resultMessage = "";
-        
-		// read form fields
+//		read form fields
 		user_otp = request.getParameter("otp").toString();
 		
-		// store sever time in unix timestamp
+//		store sever time in unix timestamp
 		Instant t1 = Instant.now();
         long cur_timestamp = t1.getEpochSecond();
 
-        // check if user took more than 60 seconds to enter OTP
+//      check if user took more than 60 seconds to enter OTP
         if(cur_timestamp - timestamp > 61) {
         	getServletContext().getRequestDispatcher("/enter_email.jsp").forward(
 	        		request, response);
         }
 		
-        // Verifying if user otp input matches
+//      Verifying if user otp input matches
 		if(otp.equals(user_otp)) {
-//			resultMessage = "OTP verified";
-//			request.setAttribute("msg", resultMessage);
 			service = new HospitalService();
 			List<HospitalDto> list = service.view_patients();
 			request.setAttribute("patientList", list);

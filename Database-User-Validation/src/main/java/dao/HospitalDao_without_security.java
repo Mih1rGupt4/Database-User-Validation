@@ -38,20 +38,20 @@ public class HospitalDao_without_security extends HospitalDatabaseAccess {
 	}
     
 	@Override
-	public void getPassword() {
-		// do database operation logic 
+	public HospitalDto getPassword() {
+//      do database operation logic 
 		dto = new HospitalDto();
 		vo = new HospitalVo();
 		try {
-			// connection to database
-			// and execute given SQL query
+//			connection to database
+//			and execute given SQL query
 			PASSWORD_VALIDATE_QUERY = "select count(dId) from doctor where dId = '" + vo.getD_id() + "' and dPassword ='"+ vo.getdPassword() + "';";
 			
 			connect = DataBaseConnection.getConnection(); 
 			stmt = connect.createStatement();
 			ResultSet rs = stmt.executeQuery(PASSWORD_VALIDATE_QUERY);
 			
-			//storing the resultant table values in the model class
+//			storing the resultant table values in the model class
 			if(rs.next()) {
 				dto.setdCount(rs.getInt(1));
 			}
@@ -62,24 +62,25 @@ public class HospitalDao_without_security extends HospitalDatabaseAccess {
 		catch (Exception e) {
 			System.out.println("Error in Dao w/t sec"+e);
 		}
+		return dto;
 	}
 	
 	@Override
-	public ArrayList<HospitalDto> get_Patient_Details() {
+	public List<HospitalDto> get_Patient_Details() {
 		HospitalDto dto = null;
-		ArrayList<HospitalDto> patients_List = new ArrayList<HospitalDto>();
+		List<HospitalDto> patients_List = new ArrayList<HospitalDto>();
 		
 		try {
 			dto = new HospitalDto();
 			vo = new HospitalVo();
 			
-			// connection to database
-			// and execute given SQL query
+//		 	connection to database
+//		 	and execute given SQL query
 			connect = DataBaseConnection.getConnection(); 
 			stmt = connect.createStatement();
 			ResultSet rs = stmt.executeQuery(VIEW_PATIENT_DETAILS_QUERY);
 			
-			//storing the resultant table values in the model dto class
+//			storing the resultant table values in the model dto class
 			while(rs.next()) {
 				dto = new HospitalDto();
 				dto.setpid(rs.getString(1));
