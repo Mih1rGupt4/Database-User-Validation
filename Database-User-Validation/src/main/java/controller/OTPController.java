@@ -52,8 +52,11 @@ public class OTPController extends HttpServlet{
             HttpServletResponse response) throws ServletException, IOException {
 		
 //		read form fields
-		user_otp = request.getParameter("otp").toString();
-		
+		try {
+			user_otp = request.getParameter("otp").toString();
+		}catch (Exception e) {
+			user_otp = "";
+		}
 //		store sever time in unix timestamp
 		Instant t1 = Instant.now();
         long cur_timestamp = t1.getEpochSecond();

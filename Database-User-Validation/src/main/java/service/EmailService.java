@@ -36,7 +36,14 @@ public class EmailService extends HttpServlet {
             HttpServletResponse response) throws ServletException, IOException {
         
 //    	read form field
-    	String recipient = request.getParameter("mail").toString();
+    	String recipient = "";
+    	try {
+    		recipient = request.getParameter("mail").toString();
+        }
+        catch (Exception e) {
+        	getServletContext().getRequestDispatcher("/enter_email.jsp").forward(
+	        		request, response);
+		}
         String subject = "Database Login OTP";
         
 //      generate otp and add it to the body content of the email
@@ -48,14 +55,7 @@ public class EmailService extends HttpServlet {
         try {
             EmailUtility.sendEmail(host, port, user, pass, recipient, subject,
                     content);
-            
-//            HospitalService service = new HospitalService();
-//            List<HospitalDto> list = service.view_patients();
-//			request.setAttribute("patientList", list);
-//			getServletContext().getRequestDispatcher("/view_patients.jsp").forward(
-//	        		request, response);
-            
-            
+           
 //          check the server time
 //          and store the unix timestamp
 //          unix timestamp is independent of different time zones
@@ -66,9 +66,8 @@ public class EmailService extends HttpServlet {
             getServletContext().getRequestDispatcher("/enter_otp.jsp").forward(
                     request, response);
         } catch (Exception ex) {
-            //ex.printStackTrace();
-            System.out.println("EmailService doPost Error: " + ex);
-            ex.printStackTrace();
+        	getServletContext().getRequestDispatcher("/enter_email.jsp").forward(
+	        		request, response);
         } 
         finally {
             
