@@ -154,8 +154,9 @@ h1
     z-index: 2;
   }
 
-h4{
+#timeleft{
     position: absolute;
-    top: 67%;
+    top: 64.5%;
+    left: 20%;
     color: white;
 }
