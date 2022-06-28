@@ -21,9 +21,9 @@
                         <p>Password</p>                                                     <!-- Input for doc password -->
                         <input type = "password" placeholder="Enter Password" name = "d_pass">
                         <input type="radio" id="radioA" name="radio_key" value=0>
-                        <label for="radioA">No-Security</label>
+                        <label id= "securityoption" for="radioA">No-Security</label>
                         <input type="radio" id="radioB" name="radio_key" value=1>
-                        <label for="radioB">Security</label><br>
+                        <label id= "securityoption1" for="radioB">Security</label><br>
                         <input type = "submit" value = "Verify" id= "log">
                 </form>
             </div>
