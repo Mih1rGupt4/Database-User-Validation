@@ -1,9 +1,9 @@
-# 4th Semister Mini Project
+# Database-User-Validation
 
-  ## Database-User-Validation
+4th Semister group Mini Project
   
-   ### Team members :-
+### Team members :-
 
-  - Dharshan AN
+- Dharshan AN
 
-  - Mihir Gupta
+- Mihir Gupta
